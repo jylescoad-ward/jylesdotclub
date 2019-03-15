@@ -1,0 +1,47 @@
+/* Sidebar */
+.sidebar{
+	height: 320px;
+	position: absolute;
+	border: 1px black solid;
+	top:150px;
+	left: 480px;
+	width:190px;
+}
+.login-form{
+	/* border: 1px solid black; */
+	border-top: 1px solid black;
+	text-align: center;
+	position: absolute;
+	top: 210px;
+	width: 180px;
+	margin-left:5px;
+}
+.login-form button{
+	width:100px;
+	border-radius: 2px;
+}
+#textbox{
+	width: 150px;
+	text-align:center;
+}
+.important-info{
+	margin:auto;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 12px;
+}
+.premiumlogin{
+	font-size: 14px;
+}
+.premiumlogin:hover{
+	font-weight: normal;
+}
+.refreshAnnounce{
+	text-align:center;
+	position: absolute;
+	top:180px;
+	display: flex;
+	margin-left: 6px;
+	justify-content: center;
+	width: 180px;
+}

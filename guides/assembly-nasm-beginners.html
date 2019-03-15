@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+	Website made by Jyles Coad-Ward
+	
+	Copyright 2018-2019 jyles.club and StrafeCode.com
+-->
+<html>
+	<head>
+		<title>jyles.club</title>
+		<link href="../vendor/css/index.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Jyles Coad-Ward's Personal Website" />
+		<meta name="author" content="Jyles Coad-Ward [dariox.club@gmail.com]">
+		
+	</head>
+	<body>
+		<div class="header">
+			<div class="title">
+				<a href="../index.html">
+					<h1>
+						jyles.club // guides
+					</h1>
+				</a>
+			</div>
+			<div class="nav">
+				<div class="nav-link1">
+					<a href="../projects.html">
+						Projects
+					</a>
+				</div>
+				<div class="nav-link2">
+					<a href="../guides.html">
+						Guides
+					</a>
+				</div>
+				<div class="nav-link3">
+					<a href="http://twitter.com/jylescoadward" target="_blank">
+						Twitter
+					</a>
+				</div>
+				<div class="locked">
+					account locked
+				</div>
+				<div class="nav-link4">
+					<a href="http://github.com/jylescoad-ward" target="_blank">
+						Github
+					</a>
+				</div>
+				<div class="nav-link5">
+					<a href="../devblog/">
+						Dev Blog
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar guide">
+			<div class="important-info" id="announce">Loading</div>
+			<button onclick="checkAnnouncements()" class="refreshAnnounce">Refresh Announcements</button>
+			<!--div class="search"-->
+			<div class="login-form">
+				<a class="premiumlogin" href="http://premium.dariox.club/login" disabled>
+					Developer Network Login
+				</a>
+				<br>Work in Progress
+				<form name="devLogin" onsubmit="return validateForm()" method="post">
+					<input type="text" placeholder="Username" name="uname" required disabled><br>
+					<input type="password" placeholder="Password" name="psw" required disabled><br>
+					<button type="submit" onclick="validateForm()" disabled>Login</button>
+				</form>
+			</div>
+			
+		</div>
+		<div class="content guide">
+			<div class="maincontent">
+				<div class="guide title">
+					Assembly x86 Beginners (with <strong>NASM</strong>, Netwide <strong>A</strong>s<strong>S</strong>e<strong>M</strong>bler)
+				</div><br>
+				<div class="guide">
+					Today you are going to learn how to make programs in Assembly with NASM!<br>
+					<br>
+					<h3>Installing Compiler</h3>
+					First off you will need to download the Netwide Assembler off the internet.<br>
+					If you are running Windows 7 and Above with 64-bit use this link<br><br>
+					<a href="https://www.nasm.us/pub/nasm/releasebuilds/2.14.03rc2/win64/nasm-2.14.03rc2-installer-x64.exe" download><code>nasm-2.14.03rc2-installer-x64.exe</code></a><br><br>
+					If you are running Windows 7 and above but you are running a <strong>32-bit computer</strong> then use this link<br><br>
+					<a href="https://www.nasm.us/pub/nasm/releasebuilds/2.14.03rc2/win32/nasm-2.14.03rc2-installer-x86.exe"><code>nasm-2.14.03rc2-installer-x86.exe</code></a><br><br>
+					If you are running Mac OS X then you need to install it with <a href="https://brew.sh/">Brew</a> or <a href="https://www.macports.org/install.php">macPorts</a><br>
+					Once you have installed Brew or macPorts type this command into your terminal of choice:<br>
+					<strong>brew:</strong> <code>brew install nasm</code><br>
+					<strong>macPorts:</strong> <code>sudo port install nasm</code><br><br>
+					To install NASM on Debian/Ubuntu with apt-get type this in your console of choice:<br><br>
+					<code>$ sudo apt get install build-essential nasm</code><br><br>
+					Once you have installed NASM on your operationg system of choice type this command into you Command Prompt or your terminal:<br>
+					<code>$ nasm -v</code><br><br>
+					If you have installed this correctly you should see something along the lines of this in your terminal<br>
+					<code>
+						$ nasm -v  <br>
+						NASM version 2.14.02 compiled on Feb 27 2019 <br>
+						$  <br>
+					</code><br>
+					or<br>
+					<code>
+						C:\nasm -v <br>
+						NASM Version 2.14.02 compiled on Feb 27 2019 <br>
+						C:\ <br>
+					</code><br>
+					
+					<h3>Coding?</h3>
+					
+					Now that you have your compiler all setup now you can start programming (yay)<br><br>
+					
+					Now open your text editor that you like to use, If you do not have a text editor other than TextEdit (Mac), or Notepad (Windows) then I suguest that you get Sublime Text (Mac, Windows, Linux) or Notepad ++ (Windows)<br><br>
+					<br>
+					This is the code that we will be learning from, In this code there are the basic things to make a bootable Assembly file. If you want to get into computer engerneering or understand how to reverse engerneer software or an operating system kernel Assmebly is a great start.<br>
+					<img src="../vendor/img/guide/nasm/beginners/code-example.png" width="538px" height="556px" style="border:1px black solid;"/><br><BR>
+					Now lets start by going down this code line by line.<br>
+					In the first line it says <code>BITS 16</code> because its telling the Assembler that the code is running under 16 Bit.<br><br>
+					On line 4 it is allocating memory in RAM for the code to run.<br>
+					On line 5 it is dividing the memory.<br>
+					On line 9 it is telling the BIOS that the area of memory that we alloacted is ours.<br>
+					On line 13 it is telling the BIOS that we want to put an ASCII string into SI, which stands for <em>Source Index</em><br>
+					On line 14 it is going to our print string function (line 22-24) to print our string, text_string (line 19), to SI.<br>
+					on line 16 <code>jmp $</code> means that the code will repeat until the string has finished printing<br>
+					On line 32 to 37 It is telling the BIOS that we have finished with whatever we want to do and we return control <em>back</em> to the BIOS.<br><br>
+					
+					<h3>Compiling</h3>
+					To compile with NASM you need to open up your Command Prompt (Windows) or your terminal of choice (Mac, Linux, *nix)<br>
+					Go into the directory that has the .asm file (Assembly x86 Source Code) and type this<br><br>
+					<code>
+					nasm -f bin  -o data.bin source.asm
+					</code><br>
+					If you want to make a bootable file in windows you should follow <a href="http://mikeos.sourceforge.net/write-your-own-os-winbuild.html">this guide</a>. But if you are using Mac or any Linux-based Operating System then type this into your terminal.<br><br>
+					
+					<code>
+					dd status=noxfer conv=notrunc if=data.bin of=bootable.flp
+					</code><br><br>
+					then type this
+					<br><br>
+					<code>
+					qemu-system-i386 -fda bootable.flp
+					</code><br><br>
+					And congratulations! You just made your first program in Assembly x86 and made it bootable! Now you're on the road to unlimited migranes (yay~)
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../vendor/js/validatelogin.js"></script>
+<script src="../vendor/js/announce.js"></script>

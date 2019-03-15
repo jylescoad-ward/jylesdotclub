@@ -1,0 +1,6 @@
+{
+	"accounts":[
+		"test":"test",
+		"admin":"verysecurepassword123"
+	]
+}

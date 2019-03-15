@@ -1,0 +1,16 @@
+.guide{
+	margin-bottom: 5px;
+}
+.title.guide{
+	font-size:20px;
+}
+.content.guide{
+	font-size: 14px;
+}
+.content.guide{
+	width:600px;
+	height: auto;
+}
+.guide.sidebar{
+	left:630px;
+}

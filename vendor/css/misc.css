@@ -1,0 +1,29 @@
+@import "tooltip.css";
+
+.locked{
+	position: relative;
+	top:-40px;
+	left: 233px;
+}
+a{
+	text-decoration: none;
+	color: #4286f4;
+}
+a:hover{
+	font-weight: bolder;
+	color: #2a5daf;
+}
+.title h1:hover{
+	font-weight: bold;
+}
+.smalltext{
+	font-size: 11px;
+}
+code{
+	height: 15px;
+	background-color: #D4D4D4;
+	background-size: cover;
+	padding: 2px;
+	font-family: monospace;
+	line-height: 1;
+}

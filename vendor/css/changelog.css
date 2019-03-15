@@ -1,0 +1,21 @@
+.changelog{
+	padding: 15px;
+}
+.changelog .title{
+	font-size: 18px;
+}
+.changelog .version{
+	font-size:10px;
+	padding-left:25px;
+}
+.changelog .changes{
+	font-size:12px;
+}
+.changelog .notes{
+	font-size: 12px;
+	font-weight: 200;
+	position: absolute;
+	bottom:0;
+	border-top: 1px black solid ;
+	width: 405px;
+}
