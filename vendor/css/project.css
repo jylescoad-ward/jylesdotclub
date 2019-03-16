@@ -1,0 +1,26 @@
+.project{
+	margin-bottom: 5px;
+}
+.title.project{
+	font-size:24px;
+}
+.content.project{
+	font-size: 14px;
+}
+.content.project{
+	width:600px;
+	height: auto;
+}
+.sidebar.project{
+	left:630px;
+}
+.latest-download.project{
+	font-size: 16px;
+	position:relative;
+	top:-10px;
+}
+.changelog-links.project{
+	font-size: 12px;
+	position:relative;
+	top:-25px;
+}

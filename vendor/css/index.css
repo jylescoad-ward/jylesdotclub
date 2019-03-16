@@ -5,6 +5,7 @@
 @import "header.css";
 @import "changelog.css";
 @import "guide.css";
+@import "project.css";
 @import "misc.css";
 *{
 	font-family: 'Roboto', sans-serif;

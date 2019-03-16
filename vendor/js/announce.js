@@ -4,6 +4,7 @@ var announceJSONRequest = new XMLHttpRequest();
 
 var displayAnnouncement; var announcementContent; var currentAnnouncementDate;
 var announceID = document.getElementById("announce");
+
 function getAnnouncement() {
 	announceJSONRequest.onload = function() {}
 		announceJSONRequest.open('GET', announceJSONURL);
@@ -30,7 +31,7 @@ function pushAnnouncement() {
 		"show": c
 	};
 	var fso = new ActiveXObject("Scripting.FileSystemObject");
-	var fh = fso.CreateTextFile("./announce.json", true);
+	var fh = fso.CreateTextFile("/announce.json", true);
 	fh.writeline(announceJSONToPush);
 	fh.Close();
 	
@@ -45,17 +46,21 @@ function wait(ms){
 }
 
 console.log("Loaded Announcement Module");
-
 function checkAnnouncements() {
 	wait(300);
+	displayAnnouncement = "down"
 	if (displayAnnouncement === "No"){
 		announceID.innerHTML = `<strong>No Current Announcements</strong>`;
 	}
 	else{
-		announceID.innerHTML = `<strong style="font-size:14px;">New Announcement</strong><br>` + announcementContent + `<br><br>` + currentAnnouncementDate;
+		if (displayAnnouncement === "down"){
+			announceID.innerHTML = ("Announcement System is temporarly down.");
+		}
+		else{
+			announceID.innerHTML = `<strong style="font-size:14px;">New Announcement</strong><br>` + announcementContent + `<br><br>` + currentAnnouncementDate;
+		}
 	}
 }
-
 
 
 checkAnnouncements();
