@@ -2,10 +2,12 @@
 .sidebar{
 	height: 320px;
 	position: absolute;
-	border: 1px black solid;
+	border: 5px gray solid;
 	top:150px;
 	left: 480px;
 	width:190px;
+	background-color: white;
+	border-radius: 3.5px;
 }
 .login-form{
 	/* border: 1px solid black; */

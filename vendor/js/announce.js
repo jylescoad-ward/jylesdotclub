@@ -1,8 +1,10 @@
 var announceJSON;
-var announceJSONURL = "announce.json";
+var announceJSONURL = "https://raw.githubusercontent.com/jylescoad-ward/jylesdotclub/master/vendor/js/announce.json";
 var announceJSONRequest = new XMLHttpRequest();
 
+
 var displayAnnouncement; var announcementContent; var currentAnnouncementDate;
+var refreshButtonID = document.getElementsByClassName("refreshAnnounce");
 var announceID = document.getElementById("announce");
 
 function getAnnouncement() {
@@ -18,7 +20,7 @@ function getAnnouncement() {
 	announcementContent = announceJSON.content;
 	currentAnnouncementDate = announceJSON.date;
 }
-getAnnouncement();
+//getAnnouncement();
 
 
 function pushAnnouncement() {
@@ -47,14 +49,15 @@ function wait(ms){
 
 console.log("Loaded Announcement Module");
 function checkAnnouncements() {
-	wait(300);
+	wait(30);
 	displayAnnouncement = "down"
 	if (displayAnnouncement === "No"){
 		announceID.innerHTML = `<strong>No Current Announcements</strong>`;
 	}
 	else{
 		if (displayAnnouncement === "down"){
-			announceID.innerHTML = ("Announcement System is temporarly down.");
+			refreshButtonID.disabled = true;
+			announceID.innerHTML = ("Announcement System is temporarily down.");
 		}
 		else{
 			announceID.innerHTML = `<strong style="font-size:14px;">New Announcement</strong><br>` + announcementContent + `<br><br>` + currentAnnouncementDate;

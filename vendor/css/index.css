@@ -6,16 +6,8 @@
 @import "changelog.css";
 @import "guide.css";
 @import "project.css";
+@import "particles-js.css";
 @import "misc.css";
 *{
 	font-family: 'Roboto', sans-serif;
-}
-#particles-js{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(35, 39, 65);
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
 }

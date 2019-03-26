@@ -109,6 +109,6 @@ var assetttt = {
   },
   "retina_detect": true
 }
-particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+particlesJS.load('particles-js', 'https://raw.githubusercontent.com/jylescoad-ward/jylesdotclub/master/vendor/js/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
 });

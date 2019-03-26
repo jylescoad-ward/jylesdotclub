@@ -1,5 +1,7 @@
 .changelog{
 	padding: 15px;
+	background-color: white;
+	border-radius: 3.5px;
 }
 .changelog .title{
 	font-size: 18px;
