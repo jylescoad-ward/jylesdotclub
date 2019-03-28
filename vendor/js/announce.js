@@ -2,7 +2,7 @@ var announceJSON;
 var announceJSONURL = "https://raw.githubusercontent.com/jylescoad-ward/jylesdotclub/master/vendor/js/announce.json";
 var announceJSONRequest = new XMLHttpRequest();
 
-var navLink5ID = document.getElementsByTagName("nav-link5");
+var navLink5ID = document.getElementById("nav-link5");
 var displayAnnouncement; var announcementContent; var currentAnnouncementDate;
 var refreshButtonID = document.getElementsByClassName("refreshAnnounce");
 var announceID = document.getElementById("announce");
@@ -49,9 +49,7 @@ function wait(ms){
 
 console.log("Loaded Announcement Module");
 function checkAnnouncements() {
-	navLink5ID.onclick = function(){
 		navLink5ID.href = "#";
-	}
 	wait(30);
 	displayAnnouncement = "down";
 	if (displayAnnouncement === "No"){
