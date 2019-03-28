@@ -15,7 +15,7 @@
 	<body id="particles-js">
 	<script src="../vendor/js/particles.js"></script>
 	<script src="../vendor/js/app.js"></script>
-		<div class="header">
+		<div class="header guide">
 			<div class="title">
 				<a href="../index.html">
 					<h1>
@@ -30,7 +30,7 @@
 					</a>
 				</div>
 				<div class="nav-link2">
-					<a href="/">
+					<a href="../">
 						Guides
 					</a>
 				</div>
@@ -48,7 +48,7 @@
 					</a>
 				</div>
 				<div class="nav-link5">
-					<a href="../devblog/">
+					<a href="devblog/" id="nav-link5">
 						Dev Blog
 					</a>
 				</div>
@@ -76,7 +76,7 @@
 				<div class="guide title">
 					Assembly x86 Beginners (with <strong>NASM</strong>, Netwide <strong>A</strong>s<strong>S</strong>e<strong>M</strong>bler)
 				</div><br>
-				<div class="guide">
+				<div class="main guide">
 					Today you are going to learn how to make programs in Assembly with NASM!<br>
 					<br>
 					<h3>Installing Compiler</h3>
@@ -117,7 +117,9 @@
 					Now open your text editor that you like to use, If you do not have a text editor other than TextEdit (Mac), or Notepad (Windows) then I suguest that you get Sublime Text (Mac, Windows, Linux) or Notepad ++ (Windows)<br><br>
 					<br>
 					This is the code that we will be learning from, In this code there are the basic things to make a bootable Assembly file. If you want to get into computer engerneering or understand how to reverse engerneer software or an operating system kernel Assmebly is a great start.<br>
-					<img src="../vendor/img/guide/nasm/beginners/code-example.png" width="538px" height="556px" style="border:1px black solid;"/><br><BR>
+					<br>
+					<img src="../vendor/img/guide/nasm/beginners/code-example.png" width="538px" height="556px" style="border:1px black solid;"/><br>
+					<BR>
 					Now lets start by going down this code line by line.<br>
 					In the first line it says <code>BITS 16</code> because its telling the Assembler that the code is running under 16 Bit.<br><br>
 					On line 4 it is allocating memory in RAM for the code to run.<br>
@@ -134,6 +136,7 @@
 					<code>
 					nasm -f bin  -o data.bin source.asm
 					</code><br>
+					<br>
 					If you want to make a bootable file in windows you should follow <a href="http://mikeos.sourceforge.net/write-your-own-os-winbuild.html">this guide</a>. But if you are using Mac or any Linux-based Operating System then type this into your terminal.<br><br>
 					
 					<code>
@@ -145,6 +148,9 @@
 					qemu-system-i386 -fda bootable.flp
 					</code><br><br>
 					And congratulations! You just made your first program in Assembly x86 and made it bootable! Now you're on the road to unlimited migranes (yay~)
+					<br>
+					<br>
+					<br>
 				</div>
 			</div>
 		</div>
