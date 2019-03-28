@@ -6,8 +6,10 @@
 	top:150px;
 	left: 480px;
 	width:190px;
-	background-color: white;
+	background-color: #282828;
 	border-radius: 3.5px;
+	color: white;
+	background-image: linear-gradient(to bottom, #282828, #404040);
 }
 .login-form{
 	/* border: 1px solid black; */
@@ -18,9 +20,12 @@
 	width: 180px;
 	margin-left:5px;
 }
-.login-form button{
+button{
 	width:100px;
 	border-radius: 2px;
+	background-color: #282828;
+	color: white;
+	border-color: #606060;
 }
 #textbox{
 	width: 150px;
@@ -31,6 +36,7 @@
 	text-align: center;
 	padding-top: 5px;
 	font-size: 12px;
+	color: white;
 }
 .premiumlogin{
 	font-size: 14px;
@@ -46,4 +52,11 @@
 	margin-left: 6px;
 	justify-content: center;
 	width: 180px;
+	background-color: #282828;
+	color: white;
+}
+.login-form form input{
+	color: white;
+	background-color: #282828;
+	border-color: #606060;
 }

@@ -7,6 +7,10 @@
 	left: 12px;
 	background-color: white;
 	border-radius: 3.5px;
+	background-color: #404040;
+	color: white;
+	background-image: linear-gradient(to bottom, #282828, #404040);
+	
 }
 
 .description{
@@ -17,9 +21,10 @@
 }
 .description-line{
 	position: absolute;
-	left: -1px;
+	top: -5px;
+	left: -0.5px;
 	border-top: 1px black solid;
-	width: 451px;
+	width: 450.5px;
 }
 .maincontent{
 	margin: 15px;

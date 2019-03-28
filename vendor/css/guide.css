@@ -1,18 +1,28 @@
 .guide{
 	margin-bottom: 5px;
-	background-color: white;
+	background-color: #404040;
 	border-radius: 3.5px;
+	color: white;
 }
 .title.guide{
 	font-size:20px;
+	background-color: transparent;
 }
 .content.guide{
 	font-size: 14px;
-}
-.content.guide{
 	width:600px;
 	height: auto;
+	background-image: linear-gradient(to bottom, #282828, #404040);
 }
 .guide.sidebar{
 	left:630px;
+	background-color: #282828;
+	background-image: linear-gradient(to bottom, #282828, #404040);
+}
+.guide.header{
+	width: 700px;
+	background-image: linear-gradient(to bottom, #282828, #404040);
+}
+.guide.main{
+	background-color: transparent;
 }

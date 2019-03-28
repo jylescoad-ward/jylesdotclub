@@ -4,6 +4,7 @@
 	position: relative;
 	top:-40px;
 	left: 233px;
+	color: white;
 }
 a{
 	text-decoration: none;
@@ -21,9 +22,13 @@ a:hover{
 }
 code{
 	height: 15px;
-	background-color: #D4D4D4;
+	background-color: #a0a0a0;
+	color: #282828;
 	background-size: cover;
 	padding: 2px;
 	font-family: monospace;
 	line-height: 1;
+}
+img{
+	border-radius: 3px;
 }
